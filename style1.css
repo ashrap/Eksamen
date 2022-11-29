@@ -35,7 +35,7 @@ header {
 }
 #newIcon img {
   position: absolute;
-  right: 520px;
+  right: 480px;
   top: 34px;
   width: 30px;
 }
@@ -44,21 +44,18 @@ header {
   color: var(--hoved-farge);
   font-weight: 600;
   font-size: 2.4rem;
-  margin-left: 30px;
 }
 
 .navbar {
   display: flex;
-  margin-right: 150px;
 }
 
 .navbar a {
   color: var(--tekst-farge);
   font-size: 1.1rem;
-  padding: 10px 40px;
+  padding: 10px 20px;
   font-weight: 500;
 }
-
 .navbar #arrangementColor:hover {
   color: rgb(218, 165, 32);
 }
