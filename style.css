@@ -1,87 +1,176 @@
-*{
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  color: var(--tekst-farge);
 }
-body{
-  background-color: lightblue;
+:root {
+  --hoved-farge: #ff2a2a;
+  --tekst-farge: #fff;
+  --bakgrunn-farge: rgb(0, 0, 51);
+  --stor-font: 5rem;
+  --h2-font: 2.25rem;
+  --p-font: 0.9rem;
+}
+body {
+  background-color: var(--bakgrunn-farge);
+  font-family: "Poppins", sans-serif;
 }
 
-
-.wrapper{
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--bakgrunn-farge);
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.875rem 10.625rem;
+  margin-bottom: 3.1rem;
 }
-.banner{
+#newIcon img {
+  position: absolute;
+  right: 22.2rem;
+  top: 2.125rem;
+  width: 1.8rem;
+}
+
+.logo {
+  color: var(--hoved-farge);
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-right: 16rem;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  color: var(--tekst-farge);
+  font-size: 1.1rem;
+  padding: 0.625rem 1.25rem;
+  font-weight: 500;
+}
+.navbar #arrangementColor:hover {
+  color: rgb(218, 165, 32);
+}
+.navbar a:hover {
+  color: var(--hoved-farge);
+  transition: 0.4s;
+}
+
+#menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
   display: none;
-  height: 300px;
 }
-
-.img-info{
+.restaurantBildet img {
   width: 100%;
+  height: auto;
 }
-.img-info h2 {
+
+.restaurant {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 6.25rem 12.5rem;
+  margin-bottom: 6.25rem;
+}
+.skriftlig {
+  padding-top: 3.125rem;
+}
+.skriftlig h1 {
+  font-size: 3.125rem;
+  line-height: 3.43rem;
+}
+#redcolor {
+  color: var(--hoved-farge);
+}
+#bestill {
+  margin-bottom: 1.25rem;
+  margin-left: 1.25rem;
+  color: rgb(201, 200, 200);
+  text-transform: uppercase;
+}
+
+#bekreft {
+  margin-top: 1.8rem;
+}
+.flexbox {
+  margin-top: 3.1rem;
+  display: flex;
+  gap: 3.1rem;
+  padding-left: 3.1rem;
+  align-items: center;
+}
+#btn {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background: var(--hoved-farge);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+#btn:hover {
+  transform: scale(1.2) translateY(0.625rem);
+  transition: 0.4s;
+}
+.see {
+  color: yellow;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+.see:hover {
+  transform: scale(1.2) translateY(-0.625rem);
+  transition: 0.4s;
+}
+.spørsmål {
+  margin-left: 25rem;
+  display: inline-block;
+  text-transform: capitalize;
+  margin-bottom: 6.25rem;
+}
+.spørsmål p {
+  font-size: 3.125rem;
+  color: white;
+}
+
+.partyBildet img {
   width: 100%;
-  padding: 30px 30px 20px;
-  font-family: arial;
-  font-size: 50px;
-  color: #111;
-  line-height: 44px;
+  position: absolute;
+  height: auto;
 }
-.img-info p {
-  padding: 0px 30px 20px;
-  font-family: arial;
-  font-size: 16px;
-  color: #111;
-  line-height: 24px;
+.partyText {
+  position: relative;
+  width: 50%;
+  left: 3.125rem;
+  top: 4.688rem;
 }
-.backround{
-  width: 100%;
+.partyText #yellow {
+  color: rgb(218, 165, 32);
+  padding-bottom: 0.9rem;
 }
-
-@media only screen and (min-width: 768px){
-  .banner{
-    display: block;
-    width: 100%;
-    padding-bottom: 30px;
-  }
-  .wrapper{
-    width: 600px;
-    margin: 0 auto;
-  }
-  .img-info h2 {
-    padding: 20px 0px 0px;
-  
-  }
-  .img-info p {
-    padding: 20px 0px 0px;
-  }
-  .backround{
-    padding-top: 30px;
-  }
-
+.partyText h1 {
+  text-transform: uppercase;
+  font-size: 3.1rem;
+  line-height: 3.4rem;
+  padding-bottom: 1.87rem;
 }
-
-@media only screen and (min-width: 1000px){
-  .wrapper{
-    width: 1000px;
-  }
-  .img-info{
-    width: 50%;
-    float: right;
-  }
-  .img-info h2 {
-    padding: 20px 0px 0px 30px;
-  
-  }
-  .img-info p {
-    padding: 20px 0px 0px 30px;
-  }
-  .backround{
-    padding-top: 0px;
-    width: 50%;
-    float: left;
-
-  }
-
+.partyText #info {
+  padding-bottom: 1.56rem;
 }
-
-
+.partyText #goldenbtn {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background: rgb(218, 165, 32);
+  color: #fff;
+}
+#goldenbtn:hover {
+  transform: scale(1.2) translateY(0.625rem);
+  transition: 0.4s;
+}
